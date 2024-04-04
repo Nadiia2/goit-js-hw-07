@@ -1,0 +1,64 @@
+body {
+  color: #2e2f42;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#boxes {
+  display: flex;
+  flex-direction: row;
+}
+
+#controls {
+  margin-bottom: 32px;
+}
+
+input {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border-radius: 8px;
+  border: 1px solid #808080;
+  margin-right: 16px;
+}
+
+button[data-create] {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  width: 120px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-right: 16px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: #ffffff;
+  background-color: #4e75ff;
+}
+
+button[data-create]:hover,
+button[data-create]:focus {
+  background-color: #6c8cff;
+}
+
+button[data-destroy] {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  width: 120px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: #ffffff;
+  background-color: #ff4e4e;
+}
+
+button[data-destroy]:hover,
+button[data-destroy]:focus {
+  background-color: #ff7070;
+}
