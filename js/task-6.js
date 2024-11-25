@@ -11,19 +11,21 @@ const destroy = document.querySelector('#controls button[data-destroy]');
 
 const createBoxes = amount => {
   let size = 30;
-  boxes.innerHTML = '';
   if (amount > 0 && amount <= 100) {
-    for (let i = amount; i > 0; i--) {
-      let box = document.createElement('div');
+    const boxArray = Array.from({ length: amount }, (_, i) => {
+      const box = document.createElement('div');
       box.style.backgroundColor = getRandomHexColor();
-      box.style.width = `${size}px`;
-      box.style.height = `${size}px`;
-      boxes.append(box);
-      size += 10;
-    }
+      box.style.width = `${size + i * 10}px`;
+      box.style.height = `${size + i * 10}px`;
+      return box;
+    });
+
+    boxes.innerHTML = ''; 
+    boxes.append(...boxArray);
   }
   input.value = '';
 };
+
 
 const destroyBoxes = () => {
   boxes.innerHTML = '';
